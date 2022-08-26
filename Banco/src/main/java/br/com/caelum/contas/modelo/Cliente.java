@@ -1,15 +1,23 @@
 package br.com.caelum.contas.modelo; //Fully Qualified Name de uma classe
+
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+/**
+ * Classe responsável por moldar clientes da Conta
+ * 
+ * @author jpalv
+ *
+ */
 public class Cliente {
 	private String nome;
 	private String sobrenome;
 	private String cpf;
 	private int idade;
-	
+
+	// construtores
 	public Cliente() {
-		
+
 	}
 
 	public Cliente(String nome, String sobreNome, String cpf, int idade) {
@@ -19,6 +27,13 @@ public class Cliente {
 		this.idade = idade;
 	}
 
+	/**
+	 * Valida o CPF com expressão regular. Caso seja compatível com o padrão
+	 * definido retorna true caso contrário retorna false
+	 * 
+	 * @param cpf
+	 * @return
+	 */
 	public boolean validaCPF(String cpf) {
 		Matcher m = Pattern.compile("^\\d{3}[.]\\d{3}[.]\\d{3}[-]\\d{2}$").matcher(cpf);
 		if (m.matches()) {
@@ -30,6 +45,12 @@ public class Cliente {
 		}
 	}
 
+	/**
+	 * Altera o cpf. Utiliza o método validaCPF() para validar antes que a alteração
+	 * ocorra.
+	 * 
+	 * @param cpf
+	 */
 	public void mudaCPF(String cpf) {
 		if (this.validaCPF(cpf)) {
 			this.cpf = cpf;
@@ -37,22 +58,27 @@ public class Cliente {
 			System.out.println("CPF Invalido!");
 		}
 	}
-
+	
+	/**
+	 * Imprime todas as informações do Cliente.
+	 */
 	@Override
 	public String toString() {
 		String dados = "";
 		dados += "Nome: " + this.nome;
-		dados += "\nSobrenome: "+ this.sobrenome;
-		dados += "\nCPF: "+ this.cpf;
-		dados += "\nIdade: "+ this.idade;
-        
-        return dados;
+		dados += "\nSobrenome: " + this.sobrenome;
+		dados += "\nCPF: " + this.cpf;
+		dados += "\nIdade: " + this.idade;
+
+		return dados;
 	}
+
+	//getters and setters
 	
 	public String getNome() {
 		return nome;
 	}
-	
+
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
@@ -68,5 +94,5 @@ public class Cliente {
 	public int getIdade() {
 		return idade;
 	}
-	
+
 }

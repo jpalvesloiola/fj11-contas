@@ -19,6 +19,7 @@ public class ContaDao {
 		String nomeDoMetodo = "carregaDados";
 		try {
 			Class<?> classe = Class.forName(PACOTE_BASE + MANIPULADOR_DE_CONTAS);
+			@SuppressWarnings("deprecation")
 			Object manipulador = classe.newInstance();
 			Method carregaDados = classe.getMethod(nomeDoMetodo);
 			contas = (List<Object>) carregaDados.invoke(manipulador);

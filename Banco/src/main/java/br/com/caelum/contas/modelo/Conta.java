@@ -1,4 +1,5 @@
-package br.com.caelum.contas.modelo; 	//Fully Qualified Name de uma classe
+package br.com.caelum.contas.modelo; //Fully Qualified Name de uma classe
+
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
@@ -10,35 +11,35 @@ import java.time.format.DateTimeFormatter;
  *
  */
 public class Conta {
-	
-	private static long id = 1000;
+
 	private int numero;
 	private BigDecimal saldo = BigDecimal.ZERO;
 	private double limite;
-	private Cliente titular ; 
+	private Cliente titular;
 	private String agencia;
 	private LocalDateTime dataDeAbertura;
 	private static int totalDeContas = 0; // Armazena o total de contas criadas
 
-	//construtores
+	// construtores
+
 	public Conta() {
 		System.out.println("Construindo uma conta...");
 		Conta.totalDeContas += 1;
-		Conta.id += 1;
 		this.dataDeAbertura = LocalDateTime.now();
 		this.titular = new Cliente();
 	}
 
 	public Conta(int numero, BigDecimal saldo, String titular, String agencia) {
-		this();		//chama construtor anterior
+		this(); // chama construtor anterior
 		this.numero = numero;
 		this.saldo = saldo;
 		this.titular.setNome(titular);
 		this.agencia = agencia;
 	}
-	
+
 	/**
 	 * Incrementa o Saldo, realizando o depósito de um valor na conta
+	 * 
 	 * @param valor
 	 */
 	public void deposita(BigDecimal valor) {
@@ -48,9 +49,11 @@ public class Conta {
 			System.out.println("Valor invalido!");
 		}
 	}
-	
+
 	/**
-	 * Decrementa o Saldo. Realiza o saque se o valor, a ser sacado, for compatível com o Saldo 
+	 * Decrementa o Saldo. Realiza o saque se o valor, a ser sacado, for compatível
+	 * com o Saldo
+	 * 
 	 * @param valor
 	 */
 	public void saca(BigDecimal valor) {
@@ -60,9 +63,10 @@ public class Conta {
 			System.out.println("Saldo insuficiente!");
 		}
 	}
-	
+
 	/**
 	 * Aplica rendimento sobre o Saldo
+	 * 
 	 * @param valor
 	 * @return
 	 */
@@ -73,6 +77,7 @@ public class Conta {
 
 	/**
 	 * Transfere um valor de uma conta para outra
+	 * 
 	 * @param contaDestino
 	 * @param valor
 	 */
@@ -80,7 +85,7 @@ public class Conta {
 		this.saca(valor);
 		contaDestino.deposita(valor);
 	}
-	
+
 	/**
 	 * Imprime todos os dados da Conta e do Titular
 	 */
@@ -100,86 +105,65 @@ public class Conta {
 
 		return dados;
 	}
-	
-	//getters and setters
-	
-	/**
-	 * Pega o saldo
-	 * @return
-	 */
+
+	// getters and setters
+
 	public BigDecimal getSaldo() {
 		return this.saldo;
 	}
-	/**
-	 * Pega o limite
-	 * @return
-	 */
+
 	public double getLimite() {
 		return this.limite;
 	}
-	
-	/**
-	 * Pega o nome do titular
-	 * @return
-	 */
+
 	public String getTitular() {
 		return this.titular.getNome();
 	}
-	
-	/**
-	 * Altera o nome do Titular da conta
-	 * @param titular
-	 */
+
 	public void setTitular(String titular) {
 		this.titular.setNome(titular);
 	}
-	
+
 	/**
 	 * Retorna o total de contas criadas
+	 * 
 	 * @return
 	 */
 	public static int getTotalDeContas() {
 		return totalDeContas;
 	}
-	
+
 	/**
 	 * Retorna a Data de abertura da conta
+	 * 
 	 * @return
 	 */
 	public String getDataDeAbertura() {
 		return dataDeAbertura.format(DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm"));
 	}
-	
-	/**
-	 * Pega o Numero da conta
-	 * @return
-	 */
+
 	public int getNumero() {
 		return numero;
 	}
-	
-	
+
 	public void setNumero(int numero) {
 		this.numero = numero;
 	}
-	
-	
+
+	/**
+	 * Altera o Saldo da conta. Chama o método deposita para garantir o
+	 * encapsulamento do atributo Saldo.
+	 * 
+	 * @param saldo
+	 */
 	public void setSaldo(BigDecimal saldo) {
 		this.deposita(saldo);
 	}
-	
-	/**
-	 * Pega a Agência da Conta 
-	 * @return
-	 */
+
 	public String getAgencia() {
 		return agencia;
 	}
-	
-	/**
-	 * Altera a Agência da Conta
-	 * @param string
-	 */
+
 	public void setAgencia(String string) {
 		this.agencia = string;
 	}

@@ -31,6 +31,7 @@ public abstract class Controller {
 		return manipulador;
 	}
 
+	@SuppressWarnings("deprecation")
 	protected void criaManipulador() {
 		String nomeDaClasse = getNomeDoManipulador();
 		try {
