@@ -17,7 +17,7 @@ Ao final deste capítulo, você será capaz de:
 
 ### UML - Diagrama de Classe
 
-![image](https://user-images.githubusercontent.com/39224574/187049309-27a0219c-584f-4ccd-97cd-3ef85cee844b.png)
+![image](https://user-images.githubusercontent.com/39224574/187787578-c58a426c-badb-4f7f-9e91-ca5a8426df6b.png)
 
 ## Capítulo - "Herança, Reescrita e Polimorfismo"
 > "O homem absurdo é aquele que nunca muda." -- Georges Clemenceau
