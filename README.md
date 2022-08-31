@@ -15,6 +15,15 @@ Ao final deste capítulo, você será capaz de:
  - Criar o Javadoc do seu aplicativo.
 
 
-## UML diagrams
+### UML - Diagrama de Classe
 
 ![image](https://user-images.githubusercontent.com/39224574/187049309-27a0219c-584f-4ccd-97cd-3ef85cee844b.png)
+
+## Capítulo - "Herança, Reescrita e Polimorfismo"
+> "O homem absurdo é aquele que nunca muda." -- Georges Clemenceau
+
+Ao final deste capítulo, você será capaz de:
+ - Dizer o que é herança e quando utilizá-la;
+ - Reutilizar código escrito anteriormente;
+ - Criar classes filhas e reescrever métodos;
+ - Usar todo o poder que o polimorfismo oferece.
