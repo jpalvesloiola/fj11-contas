@@ -13,7 +13,7 @@ import java.time.format.DateTimeFormatter;
 public class Conta {
 
 	private int numero;
-	private BigDecimal saldo = BigDecimal.ZERO;
+	protected BigDecimal saldo = BigDecimal.ZERO;
 	private double limite;
 	private Cliente titular;
 	private String agencia;
@@ -29,13 +29,13 @@ public class Conta {
 		this.titular = new Cliente();
 	}
 
-	public Conta(int numero, BigDecimal saldo, String titular, String agencia) {
+	public Conta(int numero, String titular, String agencia) {
 		this(); // chama construtor anterior
 		this.numero = numero;
-		this.saldo = saldo;
 		this.titular.setNome(titular);
 		this.agencia = agencia;
 	}
+
 
 	/**
 	 * Incrementa o Saldo, realizando o depósito de um valor na conta
@@ -52,7 +52,7 @@ public class Conta {
 
 	/**
 	 * Decrementa o Saldo. Realiza o saque se o valor, a ser sacado, for compatível
-	 * com o Saldo
+	 * com o Saldo.
 	 * 
 	 * @param valor
 	 */
@@ -85,6 +85,16 @@ public class Conta {
 		this.saca(valor);
 		contaDestino.deposita(valor);
 	}
+	
+	/**
+	 * Retorna o tipo da conta
+	 * 
+	 * @return
+	 */
+	public String getTipo() {
+		return "Conta";
+	}
+
 
 	/**
 	 * Imprime todos os dados da Conta e do Titular
@@ -167,5 +177,4 @@ public class Conta {
 	public void setAgencia(String string) {
 		this.agencia = string;
 	}
-
 }

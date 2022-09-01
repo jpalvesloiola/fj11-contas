@@ -2,6 +2,8 @@ package br.com.caelum.contas;
 
 import java.math.BigDecimal;
 import br.com.caelum.contas.modelo.Conta;
+import br.com.caelum.contas.modelo.ContaCorrente;
+import br.com.caelum.contas.modelo.ContaPoupanca;
 import br.com.caelum.javafx.api.util.Evento;
 
 /**
@@ -27,7 +29,15 @@ public class ManipuladorDeContas {
 	 * @param evento
 	 */
 	public void criaConta(Evento evento) {
-		this.conta = new Conta(56789, BigDecimal.ZERO, "Batman", "1234");
+		String tipo = evento.getSelecionadoNoRadio("tipo");
+		if (tipo.equalsIgnoreCase("Conta Corrente")) {
+			this.conta = new ContaCorrente(evento.getInt("numero"), evento.getString("titular"),
+					evento.getString("agencia"));
+		} else if (tipo.equalsIgnoreCase("Conta Poupança")) {
+			this.conta = new ContaPoupanca(evento.getInt("numero"), evento.getString("titular"),
+					evento.getString("agencia"));
+		}
+
 	}
 
 	/**
@@ -37,7 +47,7 @@ public class ManipuladorDeContas {
 	 * @param evento
 	 */
 	public void deposita(Evento evento) {
-		BigDecimal valor = new BigDecimal(evento.getDouble("valor"));
+		BigDecimal valor = new BigDecimal(evento.getString("valorOperacao"));
 		this.conta.deposita(valor);
 	}
 
@@ -48,8 +58,19 @@ public class ManipuladorDeContas {
 	 * @param evento
 	 */
 	public void saca(Evento evento) {
-		BigDecimal valor = new BigDecimal(evento.getDouble("valor"));
+		BigDecimal valor = new BigDecimal(evento.getString("valorOperacao"));
 		this.conta.saca(valor);
+
+	}
+
+	/**
+	 * Recebe o valor da interface através do parâmetro evento e chama o método
+	 * transferePara() da classe conta.
+	 * 
+	 */
+	public void transfere(Evento evento) {
+		this.conta.transferePara((Conta) evento.getSelecionadoNoCombo("destino"),
+				new BigDecimal(evento.getString("valorTransferencia")));
 	}
 
 }
