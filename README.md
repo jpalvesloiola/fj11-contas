@@ -27,3 +27,8 @@ Ao final deste capítulo, você será capaz de:
  - Reutilizar código escrito anteriormente;
  - Criar classes filhas e reescrever métodos;
  - Usar todo o poder que o polimorfismo oferece.
+
+### UML - Diagrama de Classe
+
+![image](https://user-images.githubusercontent.com/39224574/188030043-2d0adacb-bcbb-455b-8024-6025025795ee.png)
+
