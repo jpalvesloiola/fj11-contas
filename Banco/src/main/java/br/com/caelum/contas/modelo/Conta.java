@@ -10,7 +10,7 @@ import java.time.format.DateTimeFormatter;
  * @author João Pedro Alves Loiola
  *
  */
-public class Conta {
+public abstract class Conta {
 
 	private int numero;
 	protected BigDecimal saldo = BigDecimal.ZERO;
@@ -36,7 +36,6 @@ public class Conta {
 		this.agencia = agencia;
 	}
 
-
 	/**
 	 * Incrementa o Saldo, realizando o depósito de um valor na conta
 	 * 
@@ -56,13 +55,7 @@ public class Conta {
 	 * 
 	 * @param valor
 	 */
-	public void saca(BigDecimal valor) {
-		if (this.saldo.compareTo(valor) >= 0) {
-			this.saldo = this.saldo.subtract(valor);
-		} else {
-			System.out.println("Saldo insuficiente!");
-		}
-	}
+	public abstract void saca(BigDecimal valor);
 
 	/**
 	 * Aplica rendimento sobre o Saldo
@@ -85,16 +78,13 @@ public class Conta {
 		this.saca(valor);
 		contaDestino.deposita(valor);
 	}
-	
+
 	/**
 	 * Retorna o tipo da conta
 	 * 
 	 * @return
 	 */
-	public String getTipo() {
-		return "Conta";
-	}
-
+	public abstract String getTipo();
 
 	/**
 	 * Imprime todos os dados da Conta e do Titular
@@ -108,9 +98,10 @@ public class Conta {
 		dados += "\n	Idade: " + this.titular.getIdade();
 		dados += "\n	CPF: " + this.titular.getCpf();
 		dados += "\nConta:";
-		dados += "\n	Agencia: " + this.agencia;
-		dados += "\n	Saldo: R$" + this.saldo;
-		dados += "\n	Limite: R$" + this.limite;
+		dados += "\n	Tipo: " + this.getTipo();
+		dados += "\n	Agencia: " + this.getAgencia();
+		dados += "\n	Saldo: R$" + this.getSaldo();
+		dados += "\n	Limite: R$" + this.getLimite();
 		dados += "\n\n	Data de Abertura: " + this.getDataDeAbertura();
 
 		return dados;
