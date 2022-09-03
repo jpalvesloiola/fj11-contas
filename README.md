@@ -4,8 +4,7 @@ Olá, meu nome é João Pedro e estou começando uma nova imersão neste belo co
 
 ## Capítulo - "Ferramentas: Jar e Javadoc"
 
-> "Perder tempo em aprender coisas que não interessam priva-nos de
-> descobrir coisas interessantes." -- Carlos Drummond de Andrade
+> "Perder tempo em aprender coisas que não interessam priva-nos de descobrir coisas interessantes." -- Carlos Drummond de Andrade
 
 
 Ao final deste capítulo, você será capaz de:
@@ -31,4 +30,15 @@ Ao final deste capítulo, você será capaz de:
 ### UML - Diagrama de Classe
 
 ![image](https://user-images.githubusercontent.com/39224574/188030043-2d0adacb-bcbb-455b-8024-6025025795ee.png)
+
+## Capítulo - "Classes Abstratas"
+> "Dá-se importância aos antepassados quando já não temos nenhum." -- François Chateaubriand
+
+Ao final deste capítulo, você será capaz de:
+ - utilizar classes abstratas quando necessário.
+ 
+ ### UML - Diagrama de Classe
+  
+![Banco (Classe UML )](https://user-images.githubusercontent.com/39224574/188244504-6d371c88-a237-452c-884d-da5ee15f3c8a.png)
+
 
