@@ -2,7 +2,7 @@ package br.com.caelum.contas.modelo;
 
 import java.math.BigDecimal;
 
-public class ContaCorrente extends Conta {
+public class ContaCorrente extends Conta implements Tributavel {
 
 	public ContaCorrente(int numero, String titular, String agencia) {
 		super(numero, titular, agencia);
@@ -26,10 +26,20 @@ public class ContaCorrente extends Conta {
 	/**
 	 * Retorna o tipo da conta
 	 * 
-	 * @return
+	 * @return String
 	 */
 	@Override
 	public String getTipo() {
 		return "Conta Corrente";
+	}
+	
+	/**
+	 * Calculo o imposto da Conta Corrente
+	 * 
+	 * @return  
+	 */
+	@Override
+	public BigDecimal getValorImposto() {
+		return this.saldo.multiply(new BigDecimal("0.01"));
 	}
 }
