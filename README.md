@@ -8,10 +8,10 @@ Olá, meu nome é João Pedro e estou começando uma nova imersão neste belo co
 
 
 Ao final deste capítulo, você será capaz de:
- - Criar o JAR do seu aplicativo;
- - Colocar um JAR no build path do seu projeto;
- - Ler um Javadoc;
- - Criar o Javadoc do seu aplicativo.
+- Criar o JAR do seu aplicativo;
+- Colocar um JAR no build path do seu projeto;
+- Ler um Javadoc;
+- Criar o Javadoc do seu aplicativo.
 
 
 ### UML - Diagrama de Classe
@@ -22,10 +22,10 @@ Ao final deste capítulo, você será capaz de:
 > "O homem absurdo é aquele que nunca muda." -- Georges Clemenceau
 
 Ao final deste capítulo, você será capaz de:
- - Dizer o que é herança e quando utilizá-la;
- - Reutilizar código escrito anteriormente;
- - Criar classes filhas e reescrever métodos;
- - Usar todo o poder que o polimorfismo oferece.
+- Dizer o que é herança e quando utilizá-la;
+- Reutilizar código escrito anteriormente;
+- Criar classes filhas e reescrever métodos;
+- Usar todo o poder que o polimorfismo oferece.
 
 ### UML - Diagrama de Classe
 
@@ -35,10 +35,21 @@ Ao final deste capítulo, você será capaz de:
 > "Dá-se importância aos antepassados quando já não temos nenhum." -- François Chateaubriand
 
 Ao final deste capítulo, você será capaz de:
- - utilizar classes abstratas quando necessário.
+- utilizar classes abstratas quando necessário.
  
  ### UML - Diagrama de Classe
   
 ![Banco (Classe UML )](https://user-images.githubusercontent.com/39224574/188244504-6d371c88-a237-452c-884d-da5ee15f3c8a.png)
+
+## Capítulo - "Interfaces"
+> "Uma imagem vale mil palavras. Uma interface vale mil imagens." -- Ben Shneiderman
+
+Ao final deste capítulo, você será capaz de:
+
+- Dizer o que é uma interface e as diferenças entre herança e implementação;
+- Escrever uma interface em Java;
+- Utilizá-las como um poderoso recurso para diminuir acoplamento entre as classes.
+
+![Banco (Classe UML )](https://user-images.githubusercontent.com/39224574/189785505-ee724268-b1d7-4c2d-88a9-8a059652415e.png)
 
 
