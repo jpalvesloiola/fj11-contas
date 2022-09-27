@@ -39,8 +39,7 @@ Ao final deste capítulo, você será capaz de:
  
  ### UML - Diagrama de Classe
   
-![Banco (Classe UML )](https://user-images.githubusercontent.com/39224574/188244504-6d371c88-a237-452c-884d-da5ee15f3c8a.png)![Banco (Classe UML )](https://user-images.githubusercontent.com/39224574/192624448-54c1554d-b1ee-4069-86e0-b0146d34465d.png)
-
+![Banco (Classe UML )](https://user-images.githubusercontent.com/39224574/188244504-6d371c88-a237-452c-884d-da5ee15f3c8a.png)
 
 ## Capítulo - "Interfaces"
 > "Uma imagem vale mil palavras. Uma interface vale mil imagens." -- Ben Shneiderman
