@@ -45,7 +45,7 @@ public abstract class Conta {
 		if (valor.compareTo(BigDecimal.ZERO) > 0) {
 			this.saldo = this.saldo.add(valor);
 		} else {
-			System.out.println("Valor invalido!");
+			throw new IllegalArgumentException("Valor invalido!");
 		}
 	}
 
@@ -73,9 +73,14 @@ public abstract class Conta {
 	 * 
 	 * @param contaDestino
 	 * @param valor
+	 * @throws SaldoInsuficienteException 
 	 */
 	public void transferePara(Conta contaDestino, BigDecimal valor) {
-		this.saca(valor);
+		try {
+			this.saca(valor);
+		} catch (SaldoInsuficienteException e) {
+			e.getMessage();
+		}
 		contaDestino.deposita(valor);
 	}
 
