@@ -39,7 +39,8 @@ Ao final deste capítulo, você será capaz de:
  
  ### UML - Diagrama de Classe
   
-![Banco (Classe UML )](https://user-images.githubusercontent.com/39224574/188244504-6d371c88-a237-452c-884d-da5ee15f3c8a.png)
+![Banco (Classe UML )](https://user-images.githubusercontent.com/39224574/188244504-6d371c88-a237-452c-884d-da5ee15f3c8a.png)![Banco (Classe UML )](https://user-images.githubusercontent.com/39224574/192624448-54c1554d-b1ee-4069-86e0-b0146d34465d.png)
+
 
 ## Capítulo - "Interfaces"
 > "Uma imagem vale mil palavras. Uma interface vale mil imagens." -- Ben Shneiderman
@@ -53,3 +54,13 @@ Ao final deste capítulo, você será capaz de:
 ![Banco (Classe UML )](https://user-images.githubusercontent.com/39224574/189785505-ee724268-b1d7-4c2d-88a9-8a059652415e.png)
 
 
+## Capítulo - "Exceções e Controle de Erros"
+> "Quem pensa pouco erra muito."--Leonardo da Vinci
+
+Ao final deste capítulo, você será capaz de:
+
+- Controlar erros e tomar decisões com base neles;
+- Criar novos tipos de erros para melhorar o tratamento deles em sua aplicação ou biblioteca;
+- Assegurar que um método funcionou como diz em seu contrato.
+
+![Banco (Classe UML )](https://user-images.githubusercontent.com/39224574/192624525-ce135cbd-4c98-434c-822f-91a37ac0dbb6.png)
