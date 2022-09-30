@@ -73,7 +73,7 @@ public abstract class Conta {
 	 * 
 	 * @param contaDestino
 	 * @param valor
-	 * @throws SaldoInsuficienteException 
+	 * @throws SaldoInsuficienteException
 	 */
 	public void transferePara(Conta contaDestino, BigDecimal valor) {
 		try {
@@ -92,22 +92,38 @@ public abstract class Conta {
 	public abstract String getTipo();
 
 	/**
+	 * Considera duas contas com o mesmo número e agência iguais
+	 */
+	@Override
+	public boolean equals(Object obj) {
+		if (obj == null) {
+			return false;
+		}
+		if (!(obj instanceof Conta)) {
+			return false;
+		}
+		Conta outraConta = (Conta) obj;
+		return outraConta.numero == this.numero && outraConta.agencia.equals(this.agencia);
+	}
+
+	/**
 	 * Imprime todos os dados da Conta e do Titular
 	 */
 	@Override
 	public String toString() {
 		String dados = "";
-		dados += "\nTitular:";
-		dados += "\n	Nome: " + this.titular.getNome();
-		dados += "\n	Sobrenome: " + this.titular.getSobrenome();
-		dados += "\n	Idade: " + this.titular.getIdade();
-		dados += "\n	CPF: " + this.titular.getCpf();
+		dados += "Titular:";
+		dados += "\n	Nome: " + this.titular.getNome().toUpperCase();
+//		dados += "\n	Sobrenome: " + this.titular.getSobrenome();
+//		dados += "\n	Idade: " + this.titular.getIdade();
+//		dados += "\n	CPF: " + this.titular.getCpf();
 		dados += "\nConta:";
 		dados += "\n	Tipo: " + this.getTipo();
+		dados += "\n	Número: " + this.getNumero();
 		dados += "\n	Agencia: " + this.getAgencia();
-		dados += "\n	Saldo: R$" + this.getSaldo();
-		dados += "\n	Limite: R$" + this.getLimite();
-		dados += "\n\n	Data de Abertura: " + this.getDataDeAbertura();
+//		dados += "\n	Saldo: R$" + this.getSaldo();
+//		dados += "\n	Limite: R$" + this.getLimite();
+//		dados += "\n\n	Data de Abertura: " + this.getDataDeAbertura();
 
 		return dados;
 	}
