@@ -17,7 +17,7 @@ Chegou a hora de responder às perguntas mais básicas sobre Java. Ao término d
  - Entender bem o conceito de máquina virtual;
  - Compilar e executar um programa simples.
  
- ## Capítulo - VARIÁVEIS PRIMITIVAS E CONTROLE DE FLUXO
+ ## Capítulo - "Variáveis Primitivas e Controle de Fluxo"
 > "Péssima ideia a de que não se pode mudar." -- Montaigne
 
 Aprenderemos a trabalhar com os seguintes recursos da linguagem Java:
@@ -26,7 +26,7 @@ Aprenderemos a trabalhar com os seguintes recursos da linguagem Java:
  - Controle de fluxo por meio de if e else;
  - Instruções de laço for e while, controle de fluxo com break e continue.
  
-## ORIENTAÇÃO A OBJETOS BÁSICA
+## Capítulo - "Orientação a Objetos Básica"
 > "Programação orientada a objetos é uma péssima ideia que só poderia ter nascido na Califórnia." -- Edsger Dijkstra
 
 Ao término deste capítulo, você será capaz de:
@@ -35,7 +35,7 @@ Ao término deste capítulo, você será capaz de:
  - Conceituar classes, atributos e comportamentos;
  - Entender o significado de variáveis e objetos na memória.
 
-## MODIFICADORES DE ACESSO E ATRIBUTOS DE CLASSE
+## Capítulo - "Modificadores de acesso e atributos de classe"
 > "A marca do homem imaturo é que ele quer morrer nobremente por uma causa, enquanto a marca do homem maduro é querer viver modestamente por uma." --J. D. Salinger
 
 Ao final deste capítulo, você será capaz de:
@@ -45,12 +45,12 @@ Ao final deste capítulo, você será capaz de:
  - Escrever construtores para suas classes;
  - Utilizar variáveis e métodos estáticos.
  
-## ECLIPSE IDE
+## Capítulo - "Eclipse IDE"
 > "Dá-se importância aos antepassados quando já não temos nenhum." --François Chateaubriand
 
 Neste capítulo, você será apresentado ao Ambiente de Desenvolvimento Eclipse e às suas principais funcionalidades.
 
-## PACOTES - ORGANIZANDO SUAS CLASSES E BIBLIOTECAS
+## Capítulo - "Pacotes - Organizando suas classes e bibliotecas"
 > "Uma discussão prolongada significa que ambas as partes estão erradas." -- Voltaire
 
 Ao final deste capítulo, você será capaz de:
