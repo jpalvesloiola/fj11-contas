@@ -1,6 +1,62 @@
 # Apostila Caelum - Java e Orientação a Objetos
 Olá, meu nome é João Pedro e estou começando uma nova imersão neste belo conteúdo disponibilizado gratuitamente pela **Caelum**. Com isso, gostaria deixar registrado esta experiência na qual irá me proporcionar conhecimento e experiência como desenvolvedor.
 
+## Capítulo - "Como aprender java"
+> "Busco um instante feliz que justifique minha existência." -- Fiodór Dostoiévski
+
+### O que é realmente importante?
+Muitos livros, ao passar dos capítulos, mencionam todos os detalhes da linguagem junto aos seus princípios básicos. Isso acaba criando muita confusão, especialmente porque o estudante não consegue distinguir exatamente o que é primordial aprender no início daquilo que pode ser estudado mais adiante.
+
+## Capítulo - O que é Java?
+> "Computadores são inúteis, eles apenas dão respostas." -- Picasso
+
+Chegou a hora de responder às perguntas mais básicas sobre Java. Ao término deste capítulo, você será capaz de:
+
+ - Responder o que é Java;
+ - Mostrar as vantagens e desvantagens do Java;
+ - Entender bem o conceito de máquina virtual;
+ - Compilar e executar um programa simples.
+ 
+ ## Capítulo - VARIÁVEIS PRIMITIVAS E CONTROLE DE FLUXO
+> "Péssima ideia a de que não se pode mudar." -- Montaigne
+
+Aprenderemos a trabalhar com os seguintes recursos da linguagem Java:
+
+ - Declaração, atribuição de valores, casting e comparação de variáveis;
+ - Controle de fluxo por meio de if e else;
+ - Instruções de laço for e while, controle de fluxo com break e continue.
+ 
+## ORIENTAÇÃO A OBJETOS BÁSICA
+> "Programação orientada a objetos é uma péssima ideia que só poderia ter nascido na Califórnia." -- Edsger Dijkstra
+
+Ao término deste capítulo, você será capaz de:
+
+ - Dizer o que é e para que serve orientação a objetos;
+ - Conceituar classes, atributos e comportamentos;
+ - Entender o significado de variáveis e objetos na memória.
+
+## MODIFICADORES DE ACESSO E ATRIBUTOS DE CLASSE
+> "A marca do homem imaturo é que ele quer morrer nobremente por uma causa, enquanto a marca do homem maduro é querer viver modestamente por uma." --J. D. Salinger
+
+Ao final deste capítulo, você será capaz de:
+
+ - Controlar o acesso aos seus métodos, atributos e construtores por meio dos modificadores private e public;
+ - Escrever métodos de acesso a atributos do tipo getters e setters;
+ - Escrever construtores para suas classes;
+ - Utilizar variáveis e métodos estáticos.
+ 
+## ECLIPSE IDE
+> "Dá-se importância aos antepassados quando já não temos nenhum." --François Chateaubriand
+
+Neste capítulo, você será apresentado ao Ambiente de Desenvolvimento Eclipse e às suas principais funcionalidades.
+
+## PACOTES - ORGANIZANDO SUAS CLASSES E BIBLIOTECAS
+> "Uma discussão prolongada significa que ambas as partes estão erradas." -- Voltaire
+
+Ao final deste capítulo, você será capaz de:
+
+ - Separar suas classes em pacotes;
+ - Preparar arquivos simples para distribuição.
 
 ## Capítulo - "Ferramentas: Jar e Javadoc"
 
@@ -52,9 +108,8 @@ Ao final deste capítulo, você será capaz de:
 
 ![Banco (Classe UML )](https://user-images.githubusercontent.com/39224574/189785505-ee724268-b1d7-4c2d-88a9-8a059652415e.png)
 
-
 ## Capítulo - "Exceções e Controle de Erros"
-> "Quem pensa pouco erra muito."--Leonardo da Vinci
+> "Quem pensa pouco erra muito." --Leonardo da Vinci
 
 Ao final deste capítulo, você será capaz de:
 
@@ -63,3 +118,11 @@ Ao final deste capítulo, você será capaz de:
 - Assegurar que um método funcionou como diz em seu contrato.
 
 ![Banco (Classe UML )](https://user-images.githubusercontent.com/39224574/192624525-ce135cbd-4c98-434c-822f-91a37ac0dbb6.png)
+
+## Capítulo - "Um pouco de Arrays"
+> "O homem esquecerá antes a morte do pai que a perda da propriedade." --Maquiavel
+
+Ao final deste capítulo, você será capaz de:
+
+ - Declarar e instanciar arrays;
+ - Popular e percorrer arrays.
