@@ -121,9 +121,9 @@ public abstract class Conta {
 		dados += "\n	Tipo: " + this.getTipo();
 		dados += "\n	Número: " + this.getNumero();
 		dados += "\n	Agencia: " + this.getAgencia();
-//		dados += "\n	Saldo: R$" + this.getSaldo();
+		dados += "\n	Saldo: R$ " + this.getSaldo().setScale(2);
 //		dados += "\n	Limite: R$" + this.getLimite();
-//		dados += "\n\n	Data de Abertura: " + this.getDataDeAbertura();
+		dados += "\n	Data de Abertura: " + this.getDataDeAbertura();
 
 		return dados;
 	}
@@ -168,25 +168,7 @@ public abstract class Conta {
 		return numero;
 	}
 
-	public void setNumero(int numero) {
-		this.numero = numero;
-	}
-
-	/**
-	 * Altera o Saldo da conta. Chama o método deposita para garantir o
-	 * encapsulamento do atributo Saldo.
-	 * 
-	 * @param saldo
-	 */
-	public void setSaldo(BigDecimal saldo) {
-		this.deposita(saldo);
-	}
-
 	public String getAgencia() {
 		return agencia;
-	}
-
-	public void setAgencia(String string) {
-		this.agencia = string;
 	}
 }
