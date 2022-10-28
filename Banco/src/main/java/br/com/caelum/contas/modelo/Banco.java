@@ -1,7 +1,7 @@
 package br.com.caelum.contas.modelo;
 
 public class Banco {
-	private int numContas = 10;
+	private int numContas;
 	private String nome;
 	private int numero;
 	private Conta[] contas;
@@ -9,23 +9,22 @@ public class Banco {
 	public Banco(String nome, int numero) {
 		this.nome = nome;
 		this.numero = numero;
-		this.contas = new Conta[numContas];
+		this.numContas = 0;
+		this.contas = new Conta[10];
 	}
 
 	public void adiciona(Conta c) {
-		if ((numContas - 1) < 0) {
-			this.aumentaArray();
-			
+		if (numContas  >= this.contas.length) {
+			this.aumentaArray();	
 		}
-			contas[numContas - 1] = c;
-			numContas--;
+			contas[numContas] = c;
+			numContas++;
 		
 		
 	}
 
 	private void aumentaArray() {
-		numContas = this.contas.length * 2;
-		var contaMaior = new Conta[numContas];
+		var contaMaior = new Conta[this.contas.length * 2];
 		for (int i = 0; i < this.contas.length; i++) {
 			contaMaior[i] = this.contas[i];
 		}
