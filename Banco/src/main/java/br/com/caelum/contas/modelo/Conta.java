@@ -111,21 +111,21 @@ public abstract class Conta {
 	 */
 	@Override
 	public String toString() {
-		String dados = "";
-		dados += "Titular:";
-		dados += "\n	Nome: " + this.titular.getNome().toUpperCase();
-//		dados += "\n	Sobrenome: " + this.titular.getSobrenome();
-//		dados += "\n	Idade: " + this.titular.getIdade();
-//		dados += "\n	CPF: " + this.titular.getCpf();
-		dados += "\nConta:";
-		dados += "\n	Tipo: " + this.getTipo();
-		dados += "\n	Número: " + this.getNumero();
-		dados += "\n	Agencia: " + this.getAgencia();
-		dados += "\n	Saldo: R$ " + this.getSaldo().setScale(2);
-//		dados += "\n	Limite: R$" + this.getLimite();
-		dados += "\n	Data de Abertura: " + this.getDataDeAbertura();
+		StringBuilder dados = new StringBuilder();
+		dados.append("Titular:");
+		dados.append("\n	Nome: " + this.titular.getNome().toUpperCase());
+		dados.append("\n	Sobrenome: " + this.titular.getSobrenome());
+		dados.append("\n	Idade: " + this.titular.getIdade());
+		dados.append("\n	CPF: " + this.titular.getCpf());
+		dados.append("\nConta:");
+		dados.append("\n	Tipo: " + this.getTipo());
+		dados.append("\n	Número: " + this.getNumero());
+		dados.append("\n	Agencia: " + this.getAgencia());
+		dados.append("\n	Saldo: R$ " + this.getSaldo().setScale(2));
+		dados.append("\n	Limite: R$" + this.getLimite());
+		dados.append("\n	Data de Abertura: " + this.getDataDeAbertura());
 
-		return dados;
+		return dados.toString();
 	}
 
 	// getters and setters
