@@ -64,13 +64,14 @@ public class Cliente {
 	 */
 	@Override
 	public String toString() {
-		String dados = "";
-		dados += "Nome: " + this.nome;
-		dados += "\nSobrenome: " + this.sobrenome;
-		dados += "\nCPF: " + this.cpf;
-		dados += "\nIdade: " + this.idade;
+		StringBuilder dados = new StringBuilder();
+		dados.append("Titular:");
+		dados.append("\n	Nome: " + this.getNome().toUpperCase());
+		dados.append("\n	Sobrenome: " + this.getSobrenome());
+		dados.append("\n	Idade: " + this.getIdade());
+		dados.append("\n	CPF: " + this.getCpf());
 
-		return dados;
+		return dados.toString();
 	}
 
 	//getters and setters
