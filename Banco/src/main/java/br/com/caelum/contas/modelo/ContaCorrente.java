@@ -15,13 +15,18 @@ public class ContaCorrente extends Conta implements Tributavel {
 	 * @param valor
 	 */
 	@Override
-	public void saca(BigDecimal valor){
-		if(valor.compareTo(BigDecimal.ZERO) < 0) {
+	public void saca(BigDecimal valor) {
+		BigDecimal valorDoSaqueComTaxa = this.saldo.subtract(valor.add(new BigDecimal("0.1")));
+		if (valor.compareTo(BigDecimal.ZERO) < 0) {
 			throw new IllegalArgumentException("Valor inválido.");
-		}else if (this.saldo.compareTo(valor) < 0) {
+		} else if (this.saldo.compareTo(valor) < 0) {
 			throw new SaldoInsuficienteException(valor);
+		} else if (valorDoSaqueComTaxa.compareTo(BigDecimal.ZERO) < 0) {
+			throw new SaldoInsuficienteException(
+					"Saldo insuficiente!\n"
+					+ "R$ " + valor + "(valor do saque) + R$ 0.1(taxa do saque).");
 		} else {
-			this.saldo = this.saldo.subtract(valor.add(new BigDecimal("0.1")));
+			this.saldo = valorDoSaqueComTaxa;
 		}
 	}
 

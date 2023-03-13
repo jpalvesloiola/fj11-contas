@@ -24,7 +24,7 @@ public class DesafioConversaoDeNumeros {
 	    
 	    System.out.println(y);
 	}
-
+	@Conversor
 	public static int converteParaInt(String x) {
 		int i = 0;
 		while (x.length() > 0) {

@@ -1,5 +1,7 @@
 package br.com.caelum.app;
 
+import br.com.caelum.javafx.api.main.SistemaBancario;
+
 /**
  * Hello world!
  *
@@ -8,6 +10,6 @@ public class App
 {
     public static void main( String[] args )
     {
-        System.out.println( "Hello World!" );
+    	SistemaBancario.mostraTela(true);
     }
 }

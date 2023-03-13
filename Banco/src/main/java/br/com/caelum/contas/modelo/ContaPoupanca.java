@@ -13,6 +13,7 @@ public class ContaPoupanca extends Conta {
 	 * igual ao Saldo.
 	 * 
 	 * @param valor
+	 * @throws SaldoInsuficienteException 
 	 */
 	@Override
 	public void saca(BigDecimal valor) {
