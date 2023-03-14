@@ -4,6 +4,7 @@ import java.math.BigDecimal;
 import br.com.caelum.contas.modelo.Conta;
 import br.com.caelum.contas.modelo.ContaCorrente;
 import br.com.caelum.contas.modelo.ContaPoupanca;
+import br.com.caelum.contas.modelo.SaldoInsuficienteException;
 import br.com.caelum.javafx.api.util.Evento;
 
 /**
@@ -56,8 +57,9 @@ public class ManipuladorDeContas {
 	 * da classe conta.
 	 * 
 	 * @param evento
+	 * @throws SaldoInsuficienteException 
 	 */
-	public void saca(Evento evento) {
+	public void saca(Evento evento) throws SaldoInsuficienteException {
 		BigDecimal valor = new BigDecimal(evento.getString("valorOperacao"));
 		this.conta.saca(valor);
 

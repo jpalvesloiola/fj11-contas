@@ -54,8 +54,9 @@ public abstract class Conta {
 	 * com o Saldo.
 	 * 
 	 * @param valor
+	 * @throws SaldoInsuficienteException 
 	 */
-	public abstract void saca(BigDecimal valor);
+	public abstract void saca(BigDecimal valor) throws SaldoInsuficienteException;
 
 	/**
 	 * Aplica rendimento sobre o Saldo

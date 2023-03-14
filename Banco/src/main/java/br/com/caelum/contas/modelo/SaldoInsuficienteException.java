@@ -2,7 +2,7 @@ package br.com.caelum.contas.modelo;
 
 import java.math.BigDecimal;
 
-public class SaldoInsuficienteException extends RuntimeException {
+public class SaldoInsuficienteException extends Exception {
 
 	/**
 	 * 

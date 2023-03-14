@@ -16,7 +16,7 @@ public class ContaPoupanca extends Conta {
 	 * @throws SaldoInsuficienteException 
 	 */
 	@Override
-	public void saca(BigDecimal valor) {
+	public void saca(BigDecimal valor) throws SaldoInsuficienteException {
 		if (valor.compareTo(BigDecimal.ZERO) < 0) {
 			throw new IllegalArgumentException("Valor inválido.");
 		} else if (this.saldo.compareTo(valor) < 0) {

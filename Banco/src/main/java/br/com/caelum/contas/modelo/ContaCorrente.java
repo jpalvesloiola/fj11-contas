@@ -13,11 +13,12 @@ public class ContaCorrente extends Conta implements Tributavel {
 	 * com o Saldo. Tira 10 centavos de cada saque em uma conta corrente.
 	 * 
 	 * @param valor
+	 * @throws SaldoInsuficienteException 
 	 */
 	@Override
-	public void saca(BigDecimal valor) {
+	public void saca(BigDecimal valor) throws SaldoInsuficienteException {
 		BigDecimal valorDoSaqueComTaxa = this.saldo.subtract(valor.add(new BigDecimal("0.1")));
-		if (valor.compareTo(BigDecimal.ZERO) < 0) {
+		if (valor.compareTo(BigDecimal.ZERO) <= 0) {
 			throw new IllegalArgumentException("Valor inválido.");
 		} else if (this.saldo.compareTo(valor) < 0) {
 			throw new SaldoInsuficienteException(valor);
