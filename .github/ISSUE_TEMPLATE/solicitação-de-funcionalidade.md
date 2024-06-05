@@ -2,7 +2,7 @@
 name: Solicitação de funcionalidade
 about: Sugira uma ideia para este projeto
 title: Adicione um espaço reservado para o título da funcionalidade, por exemplo,
-  [Bug]
+  [Nova funcionalidade]
 labels: enhancement
 assignees: ''
 
